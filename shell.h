@@ -64,7 +64,11 @@ int shellby_env(char **args, char __attribute__((__unused__)) **front);
 int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
 int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
 
-/*Helpers*/
+/*Builtin Helpers*/
+char **_copyenv(void);
+void free_env(void);
+char **_getenv(const char *var);
+
 void help_env(void);
 void help_setenv(void);
 void help_unsetenv(void);
