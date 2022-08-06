@@ -61,5 +61,11 @@ alias_t *aliases;
 /* Builtins*/
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 
+/*Helpers*/
+void help_env(void);
+void help_setenv(void);
+void help_unsetenv(void);
+void help_history(void);
+
 
 #endif
