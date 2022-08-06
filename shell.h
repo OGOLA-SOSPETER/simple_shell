@@ -67,6 +67,9 @@ int execute(char **args, char **front);
 void free_list(list_t *head);
 char *_itoa(int num);
 char *get_location(char *command);
+int token_len(char *str, char *delim);
+int count_tokens(char *str, char *delim);
+
 
 /* Builtins*/
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
