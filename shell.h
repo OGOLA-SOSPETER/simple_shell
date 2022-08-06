@@ -60,14 +60,13 @@ alias_t *aliases;
 
 /*Main Helpers*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
-char *fill_path_dir(char *path);
 list_t *get_path_dir(char *path);
-int token_len(char *str, char *delim);
-int count_tokens(char *str, char *delim);
 char **_strtok(char *line, char *delim);
-
+int execute(char **args, char **front);
+void free_list(list_t *head);
+char *_itoa(int num);
+char *get_location(char *command);
 
 /* Builtins*/
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
@@ -89,5 +88,15 @@ void help_alias(void);
 void help_cd(void);
 void help_exit(void);
 void help_help(void);
+
+/* String functions */
+int _strlen(const char *s);
+char *_strcat(char *dest, const char *src);
+char *_strncat(char *dest, const char *src, size_t n);
+char *_strcpy(char *dest, const char *src);
+char *_strchr(char *s, char c);
+int _strspn(char *s, char *accept);
+int _strcmp(char *s1, char *s2);
+int _strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
