@@ -58,4 +58,8 @@ typedef struct alias_s
 /* Global aliases linked list */
 alias_t *aliases;
 
+/* Builtins*/
+int shellby_alias(char **args, char __attribute__((__unused__)) **front);
+
+
 #endif
