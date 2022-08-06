@@ -60,6 +60,9 @@ alias_t *aliases;
 
 /* Builtins*/
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
+int shellby_env(char **args, char __attribute__((__unused__)) **front);
+int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
+int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
 
 /*Helpers*/
 void help_env(void);
