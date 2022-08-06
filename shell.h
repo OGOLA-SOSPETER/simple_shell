@@ -62,6 +62,12 @@ alias_t *aliases;
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
+char *fill_path_dir(char *path);
+list_t *get_path_dir(char *path);
+int token_len(char *str, char *delim);
+int count_tokens(char *str, char *delim);
+char **_strtok(char *line, char *delim);
+
 
 /* Builtins*/
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
