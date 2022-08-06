@@ -58,6 +58,11 @@ typedef struct alias_s
 /* Global aliases linked list */
 alias_t *aliases;
 
+/*Main Helpers*/
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b);
+ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
+
 /* Builtins*/
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 int shellby_env(char **args, char __attribute__((__unused__)) **front);
