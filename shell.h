@@ -62,6 +62,7 @@ alias_t *aliases;
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 list_t *get_path_dir(char *path);
+char *fill_path_dir(char *path);
 char **_strtok(char *line, char *delim);
 int execute(char **args, char **front);
 void free_list(list_t *head);
