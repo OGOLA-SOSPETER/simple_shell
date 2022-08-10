@@ -119,4 +119,6 @@ char *error_2_syntax(char **args);
 char *error_126(char **args);
 char *error_127(char **args);
 
+int proc_file_commands(char *file_path, int *exe_ret);
+
 #endif
