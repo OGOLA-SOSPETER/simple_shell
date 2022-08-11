@@ -52,7 +52,7 @@ Style guidelines: [Betty style](https://github.com/holbertonschool/Betty/wiki)
 
 ### Testing
 
-
+```
  $ ls -l
  total 152
  -rw-r--r-- 1 root root   167 Aug 11 03:10 AUTHORS
@@ -81,7 +81,7 @@ Style guidelines: [Betty style](https://github.com/holbertonschool/Betty/wiki)
  drwxr-xr-x 2 root root   101 Aug 11 03:47 temp
  -rw-r--r-- 1 root root  2009 Aug  6 01:47 tokenizer.c
  $
-
+```
 
 
 ## Authors
