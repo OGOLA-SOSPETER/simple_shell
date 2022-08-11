@@ -1,14 +1,21 @@
 # Simple Shell
 -------------------------
+
+
 ### General requirements
- * Allowed editors: vi, vim, emacs
- * All your files will be compiled on `Ubuntu 20.04 LTS`
- * Your C programs and functions will be compiled with `gcc 4.8.4` using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
- * Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
- * No more than 5 functions per file
- * All your header files should be include guarded
- * This shell should not have any memory leaks
- * Unless specified otherwise, your program must have the exact same output as `sh` (`/bin/sh`) as well as the exact same error output.
+ 
+   * Allowed editors: vi, vim, emacs
+   * All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+   * All your files should end with a new line
+   * A README.md file, at the root of the folder of the project is mandatory
+   * Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+   * Your shell should not have any memory leaks
+   * No more than 5 functions per file
+   * All your header files should be include guarded
+   * Use system calls only when you need to (why?)
+   * Write a README with the description of your project
+   * You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository. Format, see Docker
+
 
 
 ### What is Shell
@@ -45,34 +52,37 @@ Style guidelines: [Betty style](https://github.com/holbertonschool/Betty/wiki)
 
 ### Testing
 
-$ ls -l
-total 152
--rw-r--r-- 1 root root   167 Aug 11 03:10 AUTHORS
--rw-r--r-- 1 root root  3106 Aug  6 01:03 builtin_aliases.c
--rw-r--r-- 1 root root  3458 Aug  6 01:03 builtins_more_helps.c
--rw-r--r-- 1 root root  1167 Aug  6 01:03 buitins_helps.c
--rw-r--r-- 1 root root  1809 Aug  6 02:31 custom_strings1.c
--rw-r--r-- 1 root root  1955 Aug  6 02:30 custom_strings.c
--rw-r--r-- 1 root root  3155 Aug  6 01:03 environ_builtins.c
--rw-r--r-- 1 root root  1450 Aug  6 01:03 environ.c
--rw-r--r-- 1 root root  1390 Aug  7 23:36 error_message1.c
--rw-r--r-- 1 root root  3392 Aug  7 23:36 error_messages.c
--rw-r--r-- 1 root root  2509 Aug 11 03:10 file_commands.c
--rw-r--r-- 1 root root  2685 Aug  6 01:10 getline.c
--rw-r--r-- 1 root root  3751 Aug  7 23:51 helpers2.c
--rw-r--r-- 1 root root  4426 Aug  7 23:55 helpers3.c
--rw-r--r-- 1 root root  3649 Aug  7 23:48 helpers.c
--rwxr-xr-x 1 root root 45536 Aug 11 03:28 hsh
--rw-r--r-- 1 root root  1643 Aug  7 23:36 len_itoa_err.c
--rw-r--r-- 1 root root  2170 Aug 11 03:10 linkedlist.c
--rw-r--r-- 1 root root  2624 Aug  6 01:24 locater.c
--rw-r--r-- 1 root root  2531 Aug  6 01:03 main.c
--rw-r--r-- 1 root root  4369 Aug 11 03:10 origbuiltin.c
--rw-r--r-- 1 root root  3586 Aug 11 03:45 README.md
--rw-r--r-- 1 root root  4372 Aug 11 03:18 shell.h
-drwxr-xr-x 2 root root   101 Aug 11 03:47 temp
--rw-r--r-- 1 root root  2009 Aug  6 01:47 tokenizer.c
-$
+
+ $ ls -l
+ total 152
+ -rw-r--r-- 1 root root   167 Aug 11 03:10 AUTHORS
+ -rw-r--r-- 1 root root  3106 Aug  6 01:03 builtin_aliases.c
+ -rw-r--r-- 1 root root  3458 Aug  6 01:03 builtins_more_helps.c
+ -rw-r--r-- 1 root root  1167 Aug  6 01:03 buitins_helps.c
+ -rw-r--r-- 1 root root  1809 Aug  6 02:31 custom_strings1.c
+ -rw-r--r-- 1 root root  1955 Aug  6 02:30 custom_strings.c
+ -rw-r--r-- 1 root root  3155 Aug  6 01:03 environ_builtins.c
+ -rw-r--r-- 1 root root  1450 Aug  6 01:03 environ.c
+ -rw-r--r-- 1 root root  1390 Aug  7 23:36 error_message1.c
+ -rw-r--r-- 1 root root  3392 Aug  7 23:36 error_messages.c
+ -rw-r--r-- 1 root root  2509 Aug 11 03:10 file_commands.c
+ -rw-r--r-- 1 root root  2685 Aug  6 01:10 getline.c
+ -rw-r--r-- 1 root root  3751 Aug  7 23:51 helpers2.c
+ -rw-r--r-- 1 root root  4426 Aug  7 23:55 helpers3.c
+ -rw-r--r-- 1 root root  3649 Aug  7 23:48 helpers.c
+ -rwxr-xr-x 1 root root 45536 Aug 11 03:28 hsh
+ -rw-r--r-- 1 root root  1643 Aug  7 23:36 len_itoa_err.c
+ -rw-r--r-- 1 root root  2170 Aug 11 03:10 linkedlist.c
+ -rw-r--r-- 1 root root  2624 Aug  6 01:24 locater.c
+ -rw-r--r-- 1 root root  2531 Aug  6 01:03 main.c
+ -rw-r--r-- 1 root root  4369 Aug 11 03:10 origbuiltin.c
+ -rw-r--r-- 1 root root  3586 Aug 11 03:45 README.md
+ -rw-r--r-- 1 root root  4372 Aug 11 03:18 shell.h
+ drwxr-xr-x 2 root root   101 Aug 11 03:47 temp
+ -rw-r--r-- 1 root root  2009 Aug  6 01:47 tokenizer.c
+ $
+
+
 
 ## Authors
 
