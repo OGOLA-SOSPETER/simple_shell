@@ -1,5 +1,6 @@
 #ifndef SHELL_H
 #define SHELL_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
@@ -67,8 +68,6 @@ int execute(char **args, char **front);
 void free_list(list_t *head);
 char *_itoa(int num);
 char *get_location(char *command);
-int token_len(char *str, char *delim);
-int count_tokens(char *str, char *delim);
 
 
 /* Builtins*/
@@ -76,6 +75,10 @@ int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 int shellby_env(char **args, char __attribute__((__unused__)) **front);
 int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
 int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
+int shellby_cd(char **args, char __attribute__((__unused__)) **front);
+int shellby_alias(char **args, char __attribute__((__unused__)) **front);
+int shellby_help(char **args, char __attribute__((__unused__)) **front);
+
 
 /*Builtin Helpers*/
 char **_copyenv(void);
@@ -114,4 +117,11 @@ char *error_2_syntax(char **args);
 char *error_126(char **args);
 char *error_127(char **args);
 
+/* Linkedlist Helpers */
+alias_t *add_alias_end(alias_t **head, char *name, char *value);
+void free_alias_list(alias_t *head);
+list_t *add_node_end(list_t **head, char *dir);
+void free_list(list_t *head);
+
+int proc_file_commands(char *file_path, int *exe_ret);
 #endif
